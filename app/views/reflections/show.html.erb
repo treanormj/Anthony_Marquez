@@ -2,31 +2,18 @@
   <h1>Comments and Stories</h1>
 </div>
 
-<h2><%= @comment.name %></h2>
-<p><%= @comment.relationship_to_tony %></p>
+<h2><%= @reflection.name %></h2>
+<p><%= @reflection.relationship %></p>
 <br />
-<p><%= @comment.co %></p>
+<p><%= @reflection.thoughts %></p>
 <br />
 
 
-<h3 class="answers">Answers:</h3>
-<ul>
-  <% if @question.answers.empty? %>
-    <li>
-      This question hasn't been answered yet
-    </li>
-  <% else %>
-    <% @question.answers.each do |answer| %>
-      <li>
-        <%= answer.description %>
-      </li>
-    <% end %>
-  <% end %>
-</ul>
+
 <br>
 <div class="bottom_links">
-  <h5><%= link_to 'Delete', @question, method: :delete, data: {confirm: 'Are you sure?'} %></h5>
-  <h5><%= link_to 'Add Answer', new_question_answer_path(@question) %></h5>
-  <h5><%= link_to 'Edit Question', edit_question_path(@question) %></h5>
-  <h5><%= link_to 'Home', root_path %></h5>
+  <h5><%= link_to 'Delete', @reflection, method: :delete, data: {confirm: 'Are you sure?'} %></h5>
+  <h5><%= link_to 'Add Answer', new_reflection_path(@reflection) %></h5>
+
+  <h5><%= link_to 'Comments', root_path %></h5>
 </div>

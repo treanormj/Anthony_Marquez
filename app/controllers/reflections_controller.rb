@@ -8,13 +8,16 @@ class ReflectionsController < ApplicationController
     @reflection = Reflection.find(params[:reflection_id])
     # @answer = Answer.new(answer_params)
     # @answer.question = @question
-
-
   # if the question is saved correctly, it will send a notice. If it is not, it just goes back to the form page.
-  if @reflection.save
-    redirect_to comment_path(@reflection), notice: "Comment was successfully created."
-  else
-    render :new
+    if @reflection.save
+      redirect_to comment_path(@reflection), notice: "Comment was successfully created."
+    else
+      render :new
+    end
+  end
+
+  def index
+    @reflections = Reflection.all
   end
 
   def show
@@ -30,8 +33,8 @@ class ReflectionsController < ApplicationController
   end
 end
   # this reduces any junk in our submissions. It keeps it with title and description. They could mess things up with curl requests.
-    private
-      def reflection_params
-        params.require(:name, :relationship).permit(:thoughts)
-      end
-end
+    # private
+    #   def reflection_params
+    #     params.require(:name, :relationship).permit(:thoughts)
+    #   end
+    # end
