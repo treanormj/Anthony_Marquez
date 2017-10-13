@@ -1,0 +1,77 @@
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+// @import "bootstrap";
+
+body {
+  background-color: #18A453;
+  font-size: 24px;
+  color: #282826;
+
+}
+
+img.me {
+  width: 400px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50px;
+  border: solid 5px;
+  border-color: #282826;
+}
+
+img.right {
+  width: 300px;
+  float: right;
+  border: solid 5px;
+  border-color: #282826;
+}
+img.centerRound {
+  width: 500px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50px;
+  border: solid 5px;
+  border-color: #282826;
+}
+.thanks {
+  font-style: italic;
+}
+
+input[type=text]{
+  width: 60%;
+  height: 30px;
+  font-size: 20px;
+}
+
+input[type=submit]{
+  /*width: 60%;*/
+  color: white;
+  font-size: 20px;
+  background: blue;
+}
+
+.title {
+  text-align: center;
+  background-color: #282826;
+  border-radius:20px;
+  color: white;
+  margin-bottom: 5%;
+}
+
+.answers{
+  text-decoration: underline;
+}
+.question_link  a {
+  color: red;
+}
+
+a:visited{
+  color: blue;
+}
+.bottom_links  a {
+  color: white;
+  font-size: 20px;
+  background: blue;
+  padding: 15px;
+  float: left;
+  margin: 15px;
+  border-radius: 10px;
+}
