@@ -8490,3 +8490,66 @@ Processing by ReflectionsController#index as HTML
 Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-10-13 15:25:41 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReflectionsController#index as HTML
+  Rendering reflections/index.html.erb within layouts/application
+  [1m[36mReflection Load (0.8ms)[0m  [1m[34mSELECT "reflections".* FROM "reflections"[0m
+  Rendered reflections/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 303ms (Views: 294.7ms | ActiveRecord: 3.2ms)
+
+
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mReflection Load (0.8ms)[0m  [1m[34mSELECT "reflections".* FROM "reflections"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "reflections" ("name", "relationship", "thoughts", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Marc"], ["relationship", "son-in-law"], ["thoughts", "Tony is one of the most amazing people I will ever meet."], ["created_at", "2017-10-13 19:27:02.392133"], ["updated_at", "2017-10-13 19:27:02.392133"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "reflections" ("name", "relationship", "thoughts", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Lorelai"], ["relationship", "Granddaughter"], ["thoughts", "Tony is loved very much."], ["created_at", "2017-10-13 19:27:02.396154"], ["updated_at", "2017-10-13 19:27:02.396154"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2017-10-13 15:27:07 -0400
+Processing by ReflectionsController#index as HTML
+  Rendering reflections/index.html.erb within layouts/application
+  [1m[36mReflection Load (0.7ms)[0m  [1m[34mSELECT "reflections".* FROM "reflections"[0m
+  Rendered reflections/index.html.erb within layouts/application (40.2ms)
+Completed 200 OK in 62ms (Views: 37.4ms | ActiveRecord: 23.4ms)
+
+
+Started GET "/reflections/5" for 127.0.0.1 at 2017-10-13 15:27:10 -0400
+Processing by ReflectionsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mReflection Load (0.4ms)[0m  [1m[34mSELECT  "reflections".* FROM "reflections" WHERE "reflections"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering reflections/show.html.erb within layouts/application
+  Rendered reflections/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 42ms (Views: 36.2ms | ActiveRecord: 0.7ms)
+
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(904173447529208955)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (5.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(904173447529208955)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-10-13 18:35:49 -0400
+Processing by ReflectionsController#index as HTML
+  Rendering reflections/index.html.erb within layouts/application
+  [1m[36mReflection Load (0.4ms)[0m  [1m[34mSELECT "reflections".* FROM "reflections"[0m
+  Rendered reflections/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 43ms (Views: 32.6ms | ActiveRecord: 5.3ms)
+
+
+  [1m[35m (8.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mReflection Load (0.9ms)[0m  [1m[34mSELECT "reflections".* FROM "reflections"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "reflections" WHERE "reflections"."id" = $1[0m  [["id", 4]]
+  [1m[35m (12.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "reflections" WHERE "reflections"."id" = $1[0m  [["id", 5]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "reflections" ("name", "relationship", "thoughts", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Marc"], ["relationship", "son-in-law"], ["thoughts", "Tony is one of the most amazing people I will ever meet."], ["created_at", "2017-10-13 22:47:44.214195"], ["updated_at", "2017-10-13 22:47:44.214195"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "reflections" ("name", "relationship", "thoughts", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Lorelai"], ["relationship", "Granddaughter"], ["thoughts", "Tony is loved very much."], ["created_at", "2017-10-13 22:47:44.217790"], ["updated_at", "2017-10-13 22:47:44.217790"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
