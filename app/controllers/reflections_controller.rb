@@ -5,12 +5,12 @@ class ReflectionsController < ApplicationController
   end
 
   def create
-    @reflection = Reflection.find(params[:reflection_id])
+    @reflection = Reflection.new(reflection_path)
     # @answer = Answer.new(answer_params)
     # @answer.question = @question
   # if the question is saved correctly, it will send a notice. If it is not, it just goes back to the form page.
     if @reflection.save
-      redirect_to comment_path(@reflection), notice: "Comment was successfully created."
+      redirect_to comment_path(@reflection), notice: "Reflection was successfully created."
     else
       render :new
     end
