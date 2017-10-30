@@ -1,15 +1,13 @@
-<div class="title">
-  <h1>New Question</h1>
-</div>
-<h2>What's on your mind?</h2>
-<%= form_for(@question) do |f| %>
+
+<h2>Please share your memories and thoughts here.</h2>
+<%= form_for(@reflection) do |f| %>
   <!-- if there are any questions, it will do this -->
   <!-- pluralize will change the word "error" if there are more than 1 error -->
-  <% if @question.errors.any? %>
+  <% if @reflection.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@question.errors.count, "error") %>prohibited this question from being saved</h2>
+      <h2><%= pluralize(@reflection.errors.count, "error") %>prohibited this question from being saved</h2>
       <ul>
-        <% @question.errors.full_messages.each do |message| %>
+        <% @reflection.errors.full_messages.each do |message| %>
           <li><%= message %></li>
           <% end %>
         </ul>
@@ -17,15 +15,19 @@
     <% end %>
 
     <div class="field">
-      <%= f.label :title %>
-      <%= f.text_field :title %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
     </div>
     <br />
     <div class="field">
-      <%= f.label :description %>
-      <%= f.text_field :description %>
+      <%= f.label :relationship %>
+      <%= f.text_field :relationship %>
     </div>
     <br>
+    <div class="field">
+      <%= f.label :thoughts %>
+      <%= f.text_field :thoughts %>
+    </div>
     <br>
     <div class="actions">
       <%= f.submit %>

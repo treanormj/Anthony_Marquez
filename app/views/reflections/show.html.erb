@@ -1,19 +1,9 @@
-<div class="title">
-  <h1>Comments and Stories</h1>
-</div>
-
-<h2><%= @reflection.name %></h2>
-<p><%= @reflection.relationship %></p>
-<br />
-<p><%= @reflection.thoughts %></p>
-<br />
-
-
+<h2>Name: <%= @reflection.name %></h2>
+<p>Relationship to Tony: <%= @reflection.relationship %></p>
+<p>Thoughts/Comments: <%= @reflection.thoughts %></p>
 
 <br>
 <div class="bottom_links">
   <h5><%= link_to 'Delete', @reflection, method: :delete, data: {confirm: 'Are you sure?'} %></h5>
-  <h5><%= link_to 'Add Answer', new_reflection_path(@reflection) %></h5>
-
-  <h5><%= link_to 'Comments', root_path %></h5>
+  <h5><%= link_to 'Home Page', root_path %></h5>
 </div>

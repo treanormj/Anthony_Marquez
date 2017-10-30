@@ -1,4 +1,10 @@
+<div class="bottom_links">
+  <h3><%= link_to 'Create New Reflection', new_reflection_path %></h3>
+</div>
 <% @reflections.each do |r| %>
-
-  <%= link_to r.name, reflection_path(r) %>
+  <ul>
+    <h1>
+      <%= link_to r.name, reflection_path(r) %>
+    </h1>
+  </ul>
 <% end %>
