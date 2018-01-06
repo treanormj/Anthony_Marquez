@@ -21,6 +21,7 @@ body {
   margin: auto;
   line-height: 95%;
 }
+
 .button_contain {
   max-width: 1500px;
   text-align:center;
@@ -67,17 +68,52 @@ body {
   // padding: 20px;
 }
 
+
+form input[type='text'] {
+  margin-left: 50px;
+  width: 200px;
+  font-size: 14px;
+}
+
+// This 'text_area' format isn't working... 
+form input[type='text_area'] {
+  margin-left: 50px;
+  width: 500px;
+  font-size: 14px;
+}
+//
+// form.textarea[type='text'] {
+//   width: 500px;
+//   font-size: 24px;
+// }
+// .thoughts {
+//   width: 500px;
+//   font-size: 40px;
+// }
+// form input[type='text_area'] {
+//   width: 50%;
+//   font-size: 24px;
+// }
+
 img.me {
-  width: 400px;
+  width: 50%;
   display: block;
   margin: 0 auto;
   border-radius: 50px;
   border: solid 5px;
   border-color: #282826;
 }
-
+img.tullips {
+  width: 20%;
+  float: right;
+  margin: 0 auto;
+  border-radius: 10%;
+  border: solid 5px;
+  border-color: #282826;
+  margin-right: 15%;
+}
 img.right {
-  width: 300px;
+  width: 30%;
   float: right;
   border: solid 5px;
   border-color: #282826;
@@ -92,7 +128,7 @@ img.centerRound {
   border-color: #282826;
 }
 img.flag {
-  width: 100px;
+  width: 125px;
   height: 225px;
   display: block;
   margin: 0 auto;
@@ -112,10 +148,10 @@ img.flag {
 //
 input[type=submit]{
   /*width: 60%;*/
-  color: #24A257;
+  color: white;
   font-size: 100%;
   border-radius: 10px;
-  background: white;
+  background: #24A257;
 }
 
 // .button {
@@ -132,6 +168,7 @@ input[type=submit]{
   border-radius: 10px;
 
 }
+
 
 // .home_links  a {
 //   color: #24A257;
